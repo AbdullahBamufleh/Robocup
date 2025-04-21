@@ -32,21 +32,25 @@ void loop() {
     for (auto ctl : myControllers) {
         if (ctl && ctl->isConnected() && ctl->hasData()) {
             processGamepad(ctl);
-            if (ctl->throttle() > 150) {
-                Serial.println("throttle");
-                forward();
-            }
-            // if (ctl->axisY() < 400) {
+            // if (ctl->throttle() > 300) {
+            //     Serial.println("throttle");
+            //     forward();
+            // }
+            // if (ctl->axisY() < -400 ) {
             //     Serial.println("LY -");
+                    // forward();
             // }
             // if (ctl->axisY() > 400) {
             //     Serial.println("LY +");
+                  //   backward();
             // }
-            // if (ctl->axisRX() < 400) {
+            // if (ctl->axisRX() < -400) {
             //     Serial.println("RX -");
+                  // left();
             // }
             // if (ctl->axisRX() > 400) {
             //     Serial.println("RX +");
+            // right();
             // }
     }
     }
